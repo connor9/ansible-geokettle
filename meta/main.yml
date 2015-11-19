@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  description: Installs the Geokettle package by downloading
+  author: British Antarctic Survey - Web and Applications Team
+  company: British Antarctic Survey
+  license: MIT
+  min_ansible_version: 1.6
+  platforms:
+  - name: Ubuntu
+      - trusty
+  categories:
+  - web

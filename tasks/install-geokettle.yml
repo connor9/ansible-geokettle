@@ -1,0 +1,18 @@
+---
+
+- name: Check if geokettle is installed
+  command: dpkg-query -W geokettle
+  register: geokettle_check_deb
+  failed_when: geokettle_check_deb.rc > 1
+  changed_when: geokettle_check_deb.rc == 1
+
+- name: Download geokettle
+  get_url:
+    url="{{ geokettle_download_url }}"
+    dest="{{ geokettle_deb_staging_path }}/geokettle.deb"
+  when: geokettle_check_deb.rc == 1
+
+- name: Install geokettle
+  apt: deb="{{ geokettle_deb_staging_path }}/geokettle.deb"
+  sudo: true
+  when: geokettle_check_deb.rc == 1

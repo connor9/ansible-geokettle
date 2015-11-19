@@ -1,0 +1,7 @@
+---
+# Default variables - inventory or playbook overrides will be respected
+geokettle_version: 2.5
+
+geokettle_download_url: "http://netcologne.dl.sourceforge.net/project/geokettle/geokettle-2.x/2.5/geokettle_2.5.deb"
+
+geokettle_deb_staging_path: "/tmp/"

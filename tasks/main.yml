@@ -1,0 +1,4 @@
+---
+# Installs and configures apache web server
+
+- include: install-geokettle.yml
